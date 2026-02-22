@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Mpatapo - Knot of reconciliation / Peacemaking, Reconciliation -->
+  <!-- Tied knot shape with four loops -->
+  <!-- Top loop -->
+  <path d="M50 60 C50 45 45 25 35 20 C25 15 18 25 22 35 C26 45 40 50 50 48" />
+  <!-- Right loop -->
+  <path d="M60 50 C75 50 95 45 100 35 C105 25 95 18 85 22 C75 26 70 40 72 50" />
+  <!-- Bottom loop -->
+  <path d="M70 60 C70 75 75 95 85 100 C95 105 102 95 98 85 C94 75 80 70 70 72" />
+  <!-- Left loop -->
+  <path d="M60 70 C45 70 25 75 20 85 C15 95 25 102 35 98 C45 94 50 80 48 70" />
+  <!-- Center crossing -->
+  <rect x="48" y="48" width="24" height="24" rx="4" />
+  <!-- Inner crossing lines -->
+  <line x1="48" y1="48" x2="72" y2="72" stroke-width="2" />
+  <line x1="72" y1="48" x2="48" y2="72" stroke-width="2" />
+</svg>

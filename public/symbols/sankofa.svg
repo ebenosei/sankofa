@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sankofa - Go back and get it / Learn from the past -->
+  <!-- Stylized bird looking backward with heart-shaped body -->
+  <!-- Bird body (heart shape) -->
+  <path d="M60 95 C60 95 30 80 30 55 C30 40 40 30 52 30 C58 30 60 35 60 40 C60 35 62 30 68 30 C80 30 90 40 90 55 C90 80 60 95 60 95Z" />
+  <!-- Bird neck curving backward -->
+  <path d="M52 30 C48 25 40 18 35 20 C28 22 25 30 30 35 C35 40 42 35 40 28" />
+  <!-- Bird head -->
+  <circle cx="35" cy="22" r="6" />
+  <!-- Bird eye -->
+  <circle cx="33" cy="21" r="1.5" fill="currentColor" />
+  <!-- Bird beak -->
+  <path d="M29 22 L25 20 L29 19" />
+  <!-- Egg (the precious thing retrieved) -->
+  <ellipse cx="60" cy="65" rx="6" ry="8" fill="currentColor" />
+  <!-- Bird feet -->
+  <path d="M50 92 L48 105 M48 105 L43 108 M48 105 L53 108" />
+  <path d="M70 92 L72 105 M72 105 L67 108 M72 105 L77 108" />
+</svg>

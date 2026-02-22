@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a1410;
+  --surface: #231e18;
+  --surface-raised: #2d2620;
+  --border: #3d3428;
+  --border-hover: #5a4a38;
+  --text-primary: #f5ede0;
+  --text-secondary: #b8a892;
+  --text-tertiary: #8a7e70;
+  --accent: #c8a45c;
+  --accent-hover: #d4b36a;
+  --accent-subtle: rgba(200, 164, 92, 0.12);
+  --terracotta: #c17044;
+  --terracotta-subtle: rgba(193, 112, 68, 0.12);
+  --success: #6b8f5e;
+  --success-subtle: rgba(107, 143, 94, 0.12);
+  --foreground: var(--text-primary);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-subtle: var(--terracotta-subtle);
+  --color-success: var(--success);
+  --color-success-subtle: var(--success-subtle);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
 }

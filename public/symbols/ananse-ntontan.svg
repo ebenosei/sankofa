@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ananse Ntontan - Spider's web / Wisdom, Creativity, Complexity -->
+  <!-- Spider web pattern -->
+  <!-- Center point -->
+  <circle cx="60" cy="60" r="3" fill="currentColor" />
+  <!-- Radial threads (8 spokes) -->
+  <line x1="60" y1="60" x2="60" y2="10" />
+  <line x1="60" y1="60" x2="95" y2="25" />
+  <line x1="60" y1="60" x2="110" y2="60" />
+  <line x1="60" y1="60" x2="95" y2="95" />
+  <line x1="60" y1="60" x2="60" y2="110" />
+  <line x1="60" y1="60" x2="25" y2="95" />
+  <line x1="60" y1="60" x2="10" y2="60" />
+  <line x1="60" y1="60" x2="25" y2="25" />
+  <!-- Spiral/concentric web rings -->
+  <!-- Inner ring -->
+  <path d="M60 45 Q68 43 72 48 Q76 55 75 60 Q74 68 68 72 Q62 76 55 75 Q48 74 45 68 Q42 62 43 55 Q44 48 52 45 Q56 43 60 45" />
+  <!-- Middle ring -->
+  <path d="M60 30 Q75 27 85 35 Q93 45 92 60 Q91 75 82 85 Q72 93 57 92 Q42 91 33 82 Q25 72 27 57 Q29 42 38 33 Q48 27 60 30" />
+  <!-- Outer ring -->
+  <path d="M60 15 Q83 12 98 25 Q111 40 110 60 Q109 82 96 96 Q82 109 60 110 Q38 109 24 96 Q11 82 12 60 Q13 38 26 25 Q40 12 60 15" />
+</svg>

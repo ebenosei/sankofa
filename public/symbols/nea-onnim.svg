@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Nea Onnim No Sua A, Ohu - He who does not know can learn / Knowledge, Life-long education -->
+  <!-- Knot/interlocking shape -->
+  <!-- Interlocking loops forming a knot -->
+  <path d="M35 40 C35 20 65 15 75 30 C85 45 70 60 60 60 C50 60 35 55 35 40Z" />
+  <path d="M85 80 C85 100 55 105 45 90 C35 75 50 60 60 60 C70 60 85 65 85 80Z" />
+  <!-- Cross-over details -->
+  <path d="M45 35 C50 30 70 30 72 40" />
+  <path d="M75 85 C70 90 50 90 48 80" />
+  <!-- Connecting curves -->
+  <path d="M35 40 C30 55 40 70 50 75" />
+  <path d="M85 80 C90 65 80 50 70 45" />
+</svg>

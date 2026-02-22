@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Nyame Nti - By God's grace / Faith and Trust in God -->
+  <!-- Stylized leaf/plant shape with curves -->
+  <!-- Central stem -->
+  <path d="M60 105 C60 105 60 60 60 20" />
+  <!-- Left leaf -->
+  <path d="M60 40 C50 35 25 30 20 50 C15 70 40 65 60 55" />
+  <!-- Right leaf -->
+  <path d="M60 40 C70 35 95 30 100 50 C105 70 80 65 60 55" />
+  <!-- Upper left leaf (smaller) -->
+  <path d="M60 28 C52 24 38 20 35 32 C32 44 48 42 60 36" />
+  <!-- Upper right leaf (smaller) -->
+  <path d="M60 28 C68 24 82 20 85 32 C88 44 72 42 60 36" />
+  <!-- Leaf vein details -->
+  <path d="M60 40 C52 42 35 50 30 55" />
+  <path d="M60 40 C68 42 85 50 90 55" />
+  <!-- Base/root -->
+  <path d="M55 105 Q60 100 65 105" />
+  <path d="M50 110 Q60 105 70 110" />
+</svg>

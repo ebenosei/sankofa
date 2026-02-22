@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ese Ne Tekrema - Teeth and Tongue / Friendship and Interdependence -->
+  <!-- Upper row of teeth -->
+  <path d="M20 40 L20 55 L35 55 L35 40 L50 40 L50 55 L65 55 L65 40 L80 40 L80 55 L95 55 L95 40" />
+  <!-- Upper gum line -->
+  <line x1="15" y1="40" x2="100" y2="40" />
+  <!-- Lower row of teeth -->
+  <path d="M28 80 L28 65 L43 65 L43 80 L58 80 L58 65 L73 65 L73 80 L88 80 L88 65" />
+  <!-- Lower gum line -->
+  <line x1="23" y1="80" x2="93" y2="80" />
+  <!-- Tongue (curved shape between teeth) -->
+  <path d="M40 58 Q60 75 80 58" />
+  <path d="M45 58 Q60 70 75 58" />
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Akoko Nan - Hen's leg / Nurturing, Discipline, Parental care -->
+  <!-- Stylized bird leg/foot shape -->
+  <!-- Upper leg -->
+  <path d="M60 12 L60 50" stroke-width="4" />
+  <!-- Knee joint -->
+  <circle cx="60" cy="50" r="5" />
+  <!-- Lower leg -->
+  <path d="M60 55 L60 75" stroke-width="4" />
+  <!-- Ankle joint -->
+  <circle cx="60" cy="75" r="4" />
+  <!-- Center toe (forward) -->
+  <path d="M60 79 L60 108" stroke-width="3.5" />
+  <path d="M55 108 L60 112 L65 108" />
+  <!-- Left toe -->
+  <path d="M60 79 L35 102" stroke-width="3.5" />
+  <path d="M30 98 L32 105 L38 102" />
+  <!-- Right toe -->
+  <path d="M60 79 L85 102" stroke-width="3.5" />
+  <path d="M82 102 L88 105 L90 98" />
+  <!-- Back toe (spur) -->
+  <path d="M60 79 L48 65" stroke-width="3" />
+  <path d="M45 68 L45 62 L50 64" />
+  <!-- Scale texture on leg -->
+  <path d="M56 58 Q60 56 64 58" stroke-width="1.5" />
+  <path d="M56 63 Q60 61 64 63" stroke-width="1.5" />
+  <path d="M56 68 Q60 66 64 68" stroke-width="1.5" />
+</svg>

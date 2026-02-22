@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Funtunfunefu Denkyemfunefu - Siamese crocodiles / Unity in diversity -->
+  <!-- Two crocodiles joined at the belly sharing one stomach -->
+  <!-- Left crocodile - head facing left -->
+  <path d="M15 35 L30 30 L30 25 L35 28 L40 25 L40 40 L35 37 L30 40 L30 35 Z" />
+  <circle cx="22" cy="32" r="2" fill="currentColor" />
+  <!-- Left crocodile body -->
+  <path d="M40 28 L80 28 Q85 28 85 33 L85 35" />
+  <path d="M40 37 L80 37 Q85 37 85 35" />
+  <!-- Shared stomach (circle in the middle) -->
+  <circle cx="60" cy="60" r="12" />
+  <!-- Connection from top croc to stomach -->
+  <line x1="60" y1="37" x2="60" y2="48" />
+  <!-- Connection from stomach to bottom croc -->
+  <line x1="60" y1="72" x2="60" y2="83" />
+  <!-- Right crocodile - head facing right -->
+  <path d="M105 85 L90 90 L90 95 L85 92 L80 95 L80 80 L85 83 L90 80 L90 85 Z" />
+  <circle cx="98" cy="88" r="2" fill="currentColor" />
+  <!-- Right crocodile body -->
+  <path d="M80 92 L40 92 Q35 92 35 87 L35 85" />
+  <path d="M80 83 L40 83 Q35 83 35 85" />
+  <!-- Zigzag spine details - top croc -->
+  <path d="M45 28 L48 23 L53 28 L58 23 L63 28 L68 23 L73 28" />
+  <!-- Zigzag spine details - bottom croc -->
+  <path d="M75 92 L72 97 L67 92 L62 97 L57 92 L52 97 L47 92" />
+</svg>

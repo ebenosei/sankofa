@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Mate Masie - What I hear, I keep / Wisdom, Knowledge, Prudence -->
+  <!-- Oval/eye shapes arranged in a pattern -->
+  <!-- Top row -->
+  <ellipse cx="40" cy="25" rx="18" ry="10" />
+  <ellipse cx="80" cy="25" rx="18" ry="10" />
+  <!-- Middle row (offset) -->
+  <ellipse cx="60" cy="50" rx="18" ry="10" />
+  <!-- Second middle row -->
+  <ellipse cx="40" cy="75" rx="18" ry="10" />
+  <ellipse cx="80" cy="75" rx="18" ry="10" />
+  <!-- Bottom row (offset) -->
+  <ellipse cx="60" cy="100" rx="18" ry="10" />
+  <!-- Inner dots representing pupils/knowledge -->
+  <ellipse cx="40" cy="25" rx="6" ry="4" fill="currentColor" />
+  <ellipse cx="80" cy="25" rx="6" ry="4" fill="currentColor" />
+  <ellipse cx="60" cy="50" rx="6" ry="4" fill="currentColor" />
+  <ellipse cx="40" cy="75" rx="6" ry="4" fill="currentColor" />
+  <ellipse cx="80" cy="75" rx="6" ry="4" fill="currentColor" />
+  <ellipse cx="60" cy="100" rx="6" ry="4" fill="currentColor" />
+</svg>

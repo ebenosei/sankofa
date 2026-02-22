@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Fawohodie - Independence / Freedom and Emancipation -->
+  <!-- Cross-like pattern with curved/hooked ends -->
+  <!-- Center cross -->
+  <rect x="52" y="52" width="16" height="16" />
+  <!-- Top arm with curved end -->
+  <path d="M52 52 L52 25 C52 15 40 12 38 22 C36 32 48 32 52 25" />
+  <path d="M68 52 L68 25 C68 15 80 12 82 22 C84 32 72 32 68 25" />
+  <!-- Bottom arm with curved end -->
+  <path d="M52 68 L52 95 C52 105 40 108 38 98 C36 88 48 88 52 95" />
+  <path d="M68 68 L68 95 C68 105 80 108 82 98 C84 88 72 88 68 95" />
+  <!-- Left arm with curved end -->
+  <path d="M52 52 L25 52 C15 52 12 40 22 38 C32 36 32 48 25 52" />
+  <path d="M52 68 L25 68 C15 68 12 80 22 82 C32 84 32 72 25 68" />
+  <!-- Right arm with curved end -->
+  <path d="M68 52 L95 52 C105 52 108 40 98 38 C88 36 88 48 95 52" />
+  <path d="M68 68 L95 68 C105 68 108 80 98 82 C88 84 88 72 95 68" />
+</svg>

@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sankofa - AI-Powered Adinkra Cultural Commerce
 
-## Getting Started
+Sankofa is an AI-powered platform where users describe feelings, intentions, or life moments in natural language and receive personalized Adinkra symbol suggestions. Users can then customize merchandise (bracelets) with their chosen symbol, name engraving, and Akan day name.
 
-First, run the development server:
+## Architecture
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Next.js 14 (App Router) Full-Stack
+├── Frontend: React + TypeScript + Tailwind CSS + Framer Motion
+├── Backend: Next.js API Routes
+├── AI: Anthropic Claude via Vercel AI SDK v6 (streaming)
+└── Data: In-memory TypeScript datasets (24 Adinkra symbols)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Design Decisions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **AI Integration**: Claude receives the full symbol catalog (~5K tokens) in the system prompt, enabling nuanced reasoning over all symbols simultaneously
+- **Streaming**: Uses `streamObject` + `useObject` for progressive rendering of symbol suggestions as they arrive
+- **Cultural Safeguards**: Sensitive symbols require explicit user confirmation via a dialog with cultural context
+- **No External DB**: Symbol data is static TypeScript—fast, type-safe, zero infrastructure for MVP
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local and add your ANTHROPIC_API_KEY
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000).
+
+## Project Structure
+
+```
+app/
+  api/interpret/    - AI symbol matching endpoint (streaming)
+  api/day-name/     - Akan day name lookup (deterministic)
+  customize/        - Product customization page
+  page.tsx          - Home page (discover symbols)
+components/
+  ui/               - Primitives (button, input, badge, skeleton, dialog)
+  chat/             - IntentInput
+  symbols/          - SymbolCard, SymbolGrid, SensitivityWarning
+  customize/        - BraceletPreview, MaterialSelector, DayNameSection
+  layout/           - Header
+data/
+  symbols.ts        - 24 Adinkra symbols with meanings, tags, and metadata
+  day-names.ts      - Akan day name mapping (7 days x 2 genders)
+schemas/            - Zod schemas for all data types
+hooks/              - useInterpretation, useProductConfig
+lib/                - Utilities, constants, AI prompts, day name algorithm
+public/symbols/     - 24 SVG files for Adinkra symbols
+```
+
+## Sample Test Prompts
+
+- "I'm starting a new business and feeling uncertain"
+- "I want to honor my grandmother who passed"
+- "I'm getting married next month"
+- "I need strength for a difficult conversation"
+- "I'm celebrating my independence and freedom"
+
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `ANTHROPIC_API_KEY` | Anthropic API key for Claude (required) |
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Deploy
+vercel
+```
+
+Set `ANTHROPIC_API_KEY` in your Vercel project environment variables.
+
+## Phase 2 Roadmap
+
+- [ ] User authentication and session persistence
+- [ ] Shopping cart with Stripe checkout
+- [ ] Order management and fulfillment
+- [ ] Expanded product line (sashes, pendants, prints)
+- [ ] Symbol compatibility checker (prevent contradictory pairings in multi-symbol products)
+- [ ] Community gallery of user configurations
+- [ ] Admin dashboard for order and symbol management
+- [ ] Internationalization (Twi, French, Portuguese)
+- [ ] Rate limiting via Upstash Redis
+- [ ] Analytics and user selection logging (PostgreSQL)

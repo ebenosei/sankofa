@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Dame-Dame - Checkered / Intelligence, Strategy -->
+  <!-- Checkered/grid pattern like a game board -->
+  <!-- Grid lines -->
+  <rect x="15" y="15" width="90" height="90" />
+  <!-- Vertical lines -->
+  <line x1="37.5" y1="15" x2="37.5" y2="105" />
+  <line x1="60" y1="15" x2="60" y2="105" />
+  <line x1="82.5" y1="15" x2="82.5" y2="105" />
+  <!-- Horizontal lines -->
+  <line x1="15" y1="37.5" x2="105" y2="37.5" />
+  <line x1="15" y1="60" x2="105" y2="60" />
+  <line x1="15" y1="82.5" x2="105" y2="82.5" />
+  <!-- Filled squares in checkerboard pattern -->
+  <rect x="15" y="15" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="60" y="15" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="37.5" y="37.5" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="82.5" y="37.5" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="15" y="60" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="60" y="60" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="37.5" y="82.5" width="22.5" height="22.5" fill="currentColor" />
+  <rect x="82.5" y="82.5" width="22.5" height="22.5" fill="currentColor" />
+</svg>

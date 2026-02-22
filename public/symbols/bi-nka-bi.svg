@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Bi Nka Bi - No one should bite another / Peace, Harmony, Caution against provocation -->
+  <!-- Two fish biting each other's tails in a circle (yin-yang like) -->
+  <!-- Outer circle guide -->
+  <!-- First fish (top, swimming clockwise) -->
+  <path d="M60 15 C85 15 105 35 105 60 C105 75 95 85 80 82 C70 80 65 72 60 65 C55 58 50 55 42 58 C34 61 30 70 35 78" />
+  <!-- First fish eye -->
+  <circle cx="80" cy="35" r="3" fill="currentColor" />
+  <!-- First fish tail -->
+  <path d="M35 78 C38 85 30 90 25 85" />
+  <path d="M35 78 C42 82 42 90 36 92" />
+  <!-- Second fish (bottom, swimming counter-clockwise) -->
+  <path d="M60 105 C35 105 15 85 15 60 C15 45 25 35 40 38 C50 40 55 48 60 55 C65 62 70 65 78 62 C86 59 90 50 85 42" />
+  <!-- Second fish eye -->
+  <circle cx="40" cy="85" r="3" fill="currentColor" />
+  <!-- Second fish tail -->
+  <path d="M85 42 C82 35 90 30 95 35" />
+  <path d="M85 42 C78 38 78 30 84 28" />
+</svg>
