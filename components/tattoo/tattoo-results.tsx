@@ -3,15 +3,19 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { TattooPreview } from "./tattoo-preview";
+import { Heart } from "lucide-react";
 import type { TattooStatus } from "@/hooks/use-tattoo-ideas";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type TattooResultsProps = {
   result: any;
   status: TattooStatus;
+  symbolSvg: string;
+  symbolName: string;
 };
 
-export function TattooResults({ result, status }: TattooResultsProps) {
+export function TattooResults({ result, status, symbolSvg, symbolName }: TattooResultsProps) {
   if (status === "loading") {
     return (
       <div className="space-y-6">
@@ -20,7 +24,7 @@ export function TattooResults({ result, status }: TattooResultsProps) {
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-56 rounded-sm" />
+            <Skeleton key={i} className="h-72 rounded-sm" />
           ))}
         </div>
       </div>
@@ -65,10 +69,20 @@ export function TattooResults({ result, status }: TattooResultsProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="rounded-sm border border-border bg-white p-6 space-y-4 hover:shadow-md hover:border-accent/30 transition-all duration-300"
+              className="rounded-sm border border-border bg-white p-6 space-y-5 hover:shadow-md hover:border-accent/30 transition-all duration-300"
             >
+              {/* Visual preview */}
+              <div className="flex justify-center py-2">
+                <TattooPreview
+                  symbolSvg={symbolSvg}
+                  symbolName={symbolName}
+                  style={idea.style}
+                  placement={idea.placement}
+                />
+              </div>
+
               {/* Style + placement badges */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {idea.style && (
                   <Badge variant="default">{idea.style.replace(/-/g, " ")}</Badge>
                 )}
@@ -109,6 +123,24 @@ export function TattooResults({ result, status }: TattooResultsProps) {
             <p className="text-sm text-text-secondary leading-relaxed">{generalAdvice}</p>
           </div>
         )}
+
+        {/* Tattoo artist disclaimer */}
+        <div className="rounded-sm border border-border bg-surface-raised p-6 text-center space-y-3">
+          <div className="flex justify-center">
+            <Heart size={18} className="text-accent" />
+          </div>
+          <h3 className="font-serif text-base text-text-primary">Support Real Tattoo Artists</h3>
+          <p className="text-sm text-text-secondary leading-relaxed max-w-xl mx-auto">
+            These AI-generated ideas are meant to serve as inspiration and a starting point for
+            conversations with your tattoo artist — not to replace their craft. Professional tattoo
+            artists bring years of expertise in skin, ink, placement, and healing that no AI can
+            replicate. Please bring these concepts to a qualified artist who can refine them into
+            a design that is truly yours.
+          </p>
+          <p className="text-xs text-text-tertiary italic">
+            We encourage you to credit and fairly compensate the artists who bring your vision to life.
+          </p>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

@@ -136,10 +136,15 @@ export default function TattooPage() {
       )}
 
       {/* Results */}
-      {status !== "idle" && (
+      {status !== "idle" && selectedSymbolData && (
         <>
           <AdinkraDivider />
-          <TattooResults result={result} status={status} />
+          <TattooResults
+            result={result}
+            status={status}
+            symbolSvg={`/symbols/${selectedSymbolData.svgFilename}`}
+            symbolName={selectedSymbolData.name}
+          />
         </>
       )}
     </div>
