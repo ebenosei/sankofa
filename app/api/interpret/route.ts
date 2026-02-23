@@ -1,5 +1,5 @@
 import { streamObject } from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
+import { google } from "@ai-sdk/google";
 import { z } from "zod";
 import { InterpretationResultSchema } from "@/schemas/interpretation";
 import { getInterpretationSystemPrompt } from "@/lib/prompts";
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const { message } = parsed.data;
 
     const result = streamObject({
-      model: anthropic("claude-sonnet-4-20250514"),
+      model: google("gemini-2.5-flash"),
       schema: InterpretationResultSchema,
       system: getInterpretationSystemPrompt(),
       prompt: `The user says: "${message}"\n\nInterpret their emotional themes and suggest 2-3 Adinkra symbols that resonate with their expressed feelings and intentions.`,
