@@ -16,15 +16,23 @@ export function useInterpretation() {
     onFinish: ({ object, error }) => {
       if (error) {
         setStatus("error");
-        setErrorMessage("Something went wrong. Please try again.");
+        setErrorMessage(
+          error.message?.includes("credit")
+            ? "API credits are low. The site owner needs to add credits."
+            : "Something went wrong. Please try again."
+        );
       } else if (object) {
         setStatus("complete");
         console.log("[Sankofa] Interpretation complete:", object);
       }
     },
-    onError: () => {
+    onError: (error) => {
       setStatus("error");
-      setErrorMessage("Failed to connect. Please check your connection and try again.");
+      setErrorMessage(
+        error.message?.includes("credit")
+          ? "API credits are low. The site owner needs to add credits."
+          : "Failed to connect. Please check your connection and try again."
+      );
     },
   });
 

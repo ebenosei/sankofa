@@ -30,11 +30,14 @@ export async function POST(req: Request) {
     });
 
     return result.toTextStreamResponse();
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Interpret API error:", error);
-    return Response.json(
-      { error: "Failed to interpret your message. Please try again." },
-      { status: 500 }
-    );
+    const message =
+      error instanceof Error && error.message.includes("credit balance")
+        ? "API credit balance is too low. Please add credits at console.anthropic.com."
+        : error instanceof Error && (error.message.includes("401") || error.message.includes("authentication"))
+        ? "Invalid API key. Please check your ANTHROPIC_API_KEY."
+        : "Failed to interpret your message. Please try again.";
+    return Response.json({ error: message }, { status: 500 });
   }
 }
