@@ -35,7 +35,10 @@ export function IntentInput({ onSubmit, isLoading, disabled }: IntentInputProps)
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full space-y-4">
+      <label className="block font-serif text-lg text-text-primary text-center">
+        What speaks to you?
+      </label>
       <form onSubmit={handleSubmit} className="relative">
         <textarea
           ref={textareaRef}
@@ -45,11 +48,11 @@ export function IntentInput({ onSubmit, isLoading, disabled }: IntentInputProps)
           rows={3}
           disabled={disabled || isLoading}
           className={cn(
-            "w-full resize-none rounded-xl border border-border bg-surface p-4 pr-14 text-sm text-text-primary",
+            "w-full resize-none rounded-sm border border-border bg-white p-5 pr-14 text-sm text-text-primary",
             "placeholder:text-text-tertiary",
-            "focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background",
+            "focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent",
             "disabled:opacity-50 disabled:pointer-events-none",
-            "transition-colors duration-150"
+            "transition-colors duration-200"
           )}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
@@ -74,13 +77,13 @@ export function IntentInput({ onSubmit, isLoading, disabled }: IntentInputProps)
       </form>
 
       {!disabled && (
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           <span className="text-xs text-text-tertiary">Try:</span>
           {EXAMPLE_PROMPTS.map((prompt) => (
             <button
               key={prompt}
               onClick={() => handleExampleClick(prompt)}
-              className="rounded-full border border-border px-3 py-1 text-xs text-text-secondary hover:border-border-hover hover:text-text-primary transition-colors"
+              className="rounded-full border border-border px-4 py-1.5 text-xs text-text-secondary hover:border-accent hover:text-accent transition-all duration-200"
             >
               {prompt}
             </button>

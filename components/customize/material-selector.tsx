@@ -11,8 +11,8 @@ type MaterialSelectorProps = {
 
 export function MaterialSelector({ selected, onSelect }: MaterialSelectorProps) {
   return (
-    <div className="space-y-2">
-      <label className="text-sm font-medium text-text-primary">Material</label>
+    <div className="space-y-3">
+      <label className="font-serif text-base text-text-primary">Material</label>
       <div className="flex gap-3">
         {MATERIALS.map((material) => {
           const colors = MATERIAL_COLORS[material];
@@ -22,16 +22,16 @@ export function MaterialSelector({ selected, onSelect }: MaterialSelectorProps) 
               key={material}
               onClick={() => onSelect(material)}
               className={cn(
-                "relative flex items-center gap-2 rounded-lg border px-4 py-3 transition-all duration-150",
+                "relative flex items-center gap-2.5 rounded-sm border px-5 py-3 transition-all duration-200",
                 "capitalize text-sm",
                 isSelected
                   ? "border-accent bg-accent-subtle text-text-primary"
-                  : "border-border bg-surface text-text-secondary hover:border-border-hover"
+                  : "border-border bg-white text-text-secondary hover:border-accent/40"
               )}
               aria-pressed={isSelected}
             >
               <span
-                className="h-4 w-4 rounded-full border border-white/20"
+                className="h-4 w-4 rounded-full"
                 style={{ background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})` }}
               />
               {material}

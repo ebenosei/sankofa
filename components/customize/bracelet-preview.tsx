@@ -22,8 +22,8 @@ export function BraceletPreview({
 
   return (
     <div className="space-y-3">
-      <label className="text-sm font-medium text-text-primary">Live Preview</label>
-      <div className="relative flex items-center justify-center rounded-2xl bg-surface-raised border border-border p-8 min-h-[280px]">
+      <label className="font-serif text-base text-text-primary">Live Preview</label>
+      <div className="relative flex items-center justify-center rounded-sm bg-surface-raised border border-border p-8 min-h-[280px]">
         {/* Bracelet band */}
         <svg
           viewBox="0 0 400 280"
@@ -59,7 +59,7 @@ export function BraceletPreview({
             y="22"
             width="70"
             height="38"
-            rx="8"
+            rx="4"
             fill={colors.primary}
             stroke={colors.secondary}
             strokeWidth="1"
@@ -82,7 +82,7 @@ export function BraceletPreview({
                 y="220"
                 width="120"
                 height="26"
-                rx="6"
+                rx="3"
                 fill={colors.primary}
                 stroke={colors.secondary}
                 strokeWidth="0.5"
@@ -92,10 +92,10 @@ export function BraceletPreview({
                 x="200"
                 y="238"
                 textAnchor="middle"
-                fill="#1a1410"
+                fill="#1C1917"
                 fontSize="11"
                 fontWeight="600"
-                fontFamily="var(--font-geist-sans), system-ui"
+                fontFamily="var(--font-inter), system-ui"
               >
                 {customName}
               </text>
@@ -110,7 +110,7 @@ export function BraceletPreview({
                 y="115"
                 width="55"
                 height="50"
-                rx="6"
+                rx="3"
                 fill={colors.primary}
                 stroke={colors.secondary}
                 strokeWidth="0.5"
@@ -120,10 +120,10 @@ export function BraceletPreview({
                 x="332"
                 y="138"
                 textAnchor="middle"
-                fill="#1a1410"
+                fill="#1C1917"
                 fontSize="10"
                 fontWeight="600"
-                fontFamily="var(--font-geist-sans), system-ui"
+                fontFamily="var(--font-inter), system-ui"
               >
                 {dayName.name}
               </text>
@@ -131,10 +131,10 @@ export function BraceletPreview({
                 x="332"
                 y="154"
                 textAnchor="middle"
-                fill="#1a1410"
+                fill="#1C1917"
                 fontSize="7"
-                opacity="0.7"
-                fontFamily="var(--font-geist-sans), system-ui"
+                opacity="0.6"
+                fontFamily="var(--font-inter), system-ui"
               >
                 {dayName.day}
               </text>
@@ -142,7 +142,7 @@ export function BraceletPreview({
           )}
         </svg>
       </div>
-      <p className="text-xs text-text-tertiary text-center">
+      <p className="text-xs text-text-tertiary text-center italic">
         Preview is illustrative. Final product may vary.
       </p>
     </div>

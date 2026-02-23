@@ -23,7 +23,7 @@ export function useInterpretation() {
         );
       } else if (object) {
         setStatus("complete");
-        console.log("[Sankofa] Interpretation complete:", object);
+        console.log("[Medea] Interpretation complete:", object);
       }
     },
     onError: (error) => {

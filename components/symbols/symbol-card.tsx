@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getSymbolById } from "@/data/symbols";
-import { AlertTriangle, Sparkles } from "lucide-react";
+import { Info, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type SymbolCardProps = {
@@ -26,7 +26,7 @@ export function SymbolCard({ suggestion, onSensitiveClick, index }: SymbolCardPr
 
   if (!symbolId || !symbol) {
     return (
-      <div className="animate-pulse rounded-xl border border-border bg-surface p-6 h-64" />
+      <div className="animate-pulse rounded-sm border border-border bg-white p-8 h-64" />
     );
   }
 
@@ -35,65 +35,65 @@ export function SymbolCard({ suggestion, onSensitiveClick, index }: SymbolCardPr
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.15 }}
+      transition={{ duration: 0.35, delay: index * 0.12 }}
       className={cn(
-        "group relative rounded-xl border border-border bg-surface p-6",
-        "hover:border-border-hover transition-all duration-200",
-        "flex flex-col gap-4"
+        "group relative rounded-sm border border-border bg-white p-8",
+        "hover:border-accent/40 hover:shadow-md transition-all duration-300",
+        "flex flex-col gap-5"
       )}
     >
-      {/* Confidence badge */}
+      {/* Badges */}
       <div className="flex items-center justify-between">
         <Badge variant={index === 0 ? "default" : "success"}>
-          <Sparkles size={12} className="mr-1" />
+          <Sparkles size={10} className="mr-1" />
           {confidencePercent}% match
         </Badge>
         {symbol.sensitive && (
-          <Badge variant="warning">
-            <AlertTriangle size={12} className="mr-1" />
-            Sensitive
+          <Badge variant="heritage">
+            <Info size={10} className="mr-1" />
+            Cultural context
           </Badge>
         )}
       </div>
 
-      {/* Symbol image + name */}
-      <div className="flex items-start gap-4">
-        <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-surface-raised p-2 flex items-center justify-center">
-          <Image
-            src={`/symbols/${symbol.svgFilename}`}
-            alt={symbol.name}
-            width={48}
-            height={48}
-            className="opacity-90"
-          />
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-text-primary">{symbol.name}</h3>
-          <p className="text-sm text-accent italic">&ldquo;{symbol.literal}&rdquo;</p>
-          <p className="mt-1 text-sm text-text-secondary">{symbol.coreMeaning}</p>
-        </div>
+      {/* Symbol image centered */}
+      <div className="flex-shrink-0 w-20 h-20 rounded-sm bg-surface-raised p-3 flex items-center justify-center mx-auto">
+        <Image
+          src={`/symbols/${symbol.svgFilename}`}
+          alt={symbol.name}
+          width={56}
+          height={56}
+          className="opacity-80"
+        />
       </div>
 
-      {/* Personalized reasoning */}
+      {/* Name + literal */}
+      <div className="text-center">
+        <h3 className="font-serif text-xl text-text-primary">{symbol.name}</h3>
+        <p className="text-sm text-accent italic mt-1">&ldquo;{symbol.literal}&rdquo;</p>
+        <p className="mt-2 text-sm text-text-secondary leading-relaxed">{symbol.coreMeaning}</p>
+      </div>
+
+      {/* Reasoning — gold left border */}
       {suggestion.reasoning && (
-        <div className="rounded-lg bg-accent-subtle p-3">
-          <p className="text-xs font-medium text-accent mb-1">Why this symbol</p>
-          <p className="text-sm text-text-secondary">{suggestion.reasoning}</p>
+        <div className="border-l-2 border-accent pl-4">
+          <p className="text-xs text-text-tertiary uppercase tracking-wider mb-1">Why this symbol</p>
+          <p className="text-sm text-text-secondary leading-relaxed">{suggestion.reasoning}</p>
         </div>
       )}
 
       {/* Personalized meaning */}
       {suggestion.personalizedMeaning && (
-        <p className="text-sm text-text-secondary">
+        <p className="text-sm text-text-secondary leading-relaxed">
           <span className="font-medium text-text-primary">For you:</span>{" "}
           {suggestion.personalizedMeaning}
         </p>
       )}
 
       {/* Cultural note */}
-      <p className="text-xs text-text-tertiary italic border-t border-border pt-3">
+      <p className="text-xs text-text-tertiary italic border-t border-border pt-4">
         {symbol.culturalNote}
       </p>
 
@@ -101,18 +101,17 @@ export function SymbolCard({ suggestion, onSensitiveClick, index }: SymbolCardPr
       <div className="mt-auto pt-2">
         {symbol.sensitive ? (
           <Button
-            variant="terracotta"
-            size="sm"
+            variant="heritage"
+            size="md"
             className="w-full"
             onClick={() => onSensitiveClick?.(symbolId)}
           >
-            <AlertTriangle size={14} className="mr-1.5" />
             Review & Customize
           </Button>
         ) : (
           <Link href={`/customize?symbol=${symbolId}`} className="block">
-            <Button variant="primary" size="sm" className="w-full">
-              Customize with this symbol
+            <Button variant="primary" size="md" className="w-full">
+              Customize
             </Button>
           </Link>
         )}

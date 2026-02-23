@@ -2,9 +2,10 @@ import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "react";
 
 const variants = {
-  default: "bg-accent-subtle text-accent border-accent/20",
-  warning: "bg-terracotta-subtle text-terracotta border-terracotta/20",
-  success: "bg-success-subtle text-success border-success/20",
+  default: "bg-accent-subtle text-accent border-accent/15",
+  warning: "bg-terracotta-subtle text-terracotta border-terracotta/15",
+  success: "bg-success-subtle text-success border-success/15",
+  heritage: "bg-heritage-green-subtle text-heritage-green border-heritage-green/15",
 } as const;
 
 type BadgeProps = HTMLAttributes<HTMLSpanElement> & {

@@ -1,30 +1,35 @@
 "use client";
 
 import Link from "next/link";
-import { APP_NAME } from "@/lib/constants";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl" role="img" aria-label="Sankofa bird">
-            &#x1F426;
+    <header className="sticky top-0 z-40 border-b border-border bg-background">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <Link href="/" className="flex flex-col items-start group">
+          <span className="font-serif text-xl tracking-[0.2em] font-semibold text-text-primary group-hover:text-accent transition-colors">
+            MEDEA
           </span>
-          <span className="text-lg font-semibold text-accent group-hover:text-accent-hover transition-colors">
-            {APP_NAME}
+          <span className="text-[10px] tracking-[0.15em] text-text-tertiary italic -mt-0.5">
+            me dea
           </span>
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-8">
           <Link
             href="/"
-            className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            className="text-xs tracking-[0.15em] uppercase text-text-secondary hover:text-accent transition-colors"
           >
             Discover
           </Link>
           <Link
+            href="/tattoo"
+            className="text-xs tracking-[0.15em] uppercase text-text-secondary hover:text-accent transition-colors"
+          >
+            Tattoo Ideas
+          </Link>
+          <Link
             href="/customize"
-            className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            className="text-xs tracking-[0.15em] uppercase text-text-secondary hover:text-accent transition-colors"
           >
             Customize
           </Link>

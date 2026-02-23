@@ -1,5 +1,5 @@
-import { SankofahApp } from "@/components/sankofa-app";
+import { MedeaApp } from "@/components/medea-app";
 
 export default function Home() {
-  return <SankofahApp />;
+  return <MedeaApp />;
 }
